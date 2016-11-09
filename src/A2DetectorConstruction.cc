@@ -306,7 +306,7 @@ void A2DetectorConstruction::DefineMaterials()
   A2_HeMix->AddElement(A2_Hemix, natoms=1);
 
 //Butanol (C4H9OH):
-  G4Material* A2_Butanol=new G4Material("A2_Butanol", density=0.8*g/cm3, ncomponents=3);
+  G4Material* A2_Butanol=new G4Material("A2_Butanol", density=0.94*g/cm3, ncomponents=3);//0.8 is correct for room temperature
   A2_Butanol->AddElement(NistManager->FindOrBuildElement(6),4);
   A2_Butanol->AddElement(NistManager->FindOrBuildElement(1),10);
   A2_Butanol->AddElement(NistManager->FindOrBuildElement(8),1);
@@ -344,6 +344,31 @@ void A2DetectorConstruction::DefineMaterials()
   G4Material* A2_Epoxy=new G4Material("A2_Epoxy", density=1.2*g/cm3, ncomponents=2);
   A2_Epoxy->AddMaterial(A2_Resin, fractionmass=0.8);
   A2_Epoxy->AddMaterial(A2_13BAC, fractionmass=0.2);
+
+//Mylar for Cherenkov windows (C10H8O4)
+G4Material* Myl = new G4Material("Mylar", density= 1.397*g/cm3, ncomponents=3);
+Myl->AddElement(NistManager->FindOrBuildElement(6), 10);
+Myl->AddElement(NistManager->FindOrBuildElement(1), 8);
+Myl->AddElement(NistManager->FindOrBuildElement(8), 4);
+
+//Tedlar for Cherenkov windows (C2H3F)
+G4Material* Tedlar= new G4Material("Tedlar", density= 1.397*g/cm3, ncomponents=3);
+Tedlar->AddElement(NistManager->FindOrBuildElement(6), 2);
+Tedlar->AddElement(NistManager->FindOrBuildElement(1), 3);
+Tedlar->AddElement(NistManager->FindOrBuildElement(9), 1);
+
+//PVC for Cherenkov nose (C2H3Cl)
+G4Material* PVC= new G4Material("PVC", density= 1.45*g/cm3, ncomponents=3);
+PVC->AddElement(NistManager->FindOrBuildElement(6), 2);
+PVC->AddElement(NistManager->FindOrBuildElement(1), 3);
+PVC->AddElement(NistManager->FindOrBuildElement(17), 1);
+
+//gas of Cherenkov detector (C4F8)
+G4double temperature  = 293.15*kelvin;
+G4double pressure    = 80.*pascal;
+G4Material* Cherenkovgas= new G4Material("Cherenkovgas", density= 0.00867*g/cm3, ncomponents=2,kStateGas,temperature,pressure);
+Cherenkovgas->AddElement(NistManager->FindOrBuildElement(6), 4);
+Cherenkovgas->AddElement(NistManager->FindOrBuildElement(9), 8);
 
 
   /*Now useG4NistManager
