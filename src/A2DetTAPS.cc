@@ -117,7 +117,7 @@ void  A2DetTAPS::PlaceCrystals(){
   fclose(TAPSfile);
 }
 void  A2DetTAPS::MakeForwardWallMother(){
-  G4double z_vbox = 10.*cm;   // z size of Veto box
+  G4double z_vbox = 6.*cm;   // z size of Veto box; originally 10cm, need to subtract 4cm in z-direction, otherwise there is overlap with the Cherenkov geometry
   G4double z_Al = 50.*cm;     // z size of Al box
   //G4double  set0 = 175.*cm;   //distance from target to front of TAPS
   G4double fwmv_phlow=0.*deg;
@@ -288,7 +288,7 @@ void  A2DetTAPS::MakeVeto(){
   
 
   G4VisAttributes* vbox_visatt=new G4VisAttributes();
-  vbox_visatt->SetVisibility(false);;
+  //vbox_visatt->SetVisibility(false);;
   vbox_visatt->SetColor(G4Color(0,0,1));
 
   //c=== Veto detector box (front and back walls) =======>
