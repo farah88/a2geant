@@ -3,6 +3,16 @@
 [#]*[#]
 .\#*
 *.swp
+*.config
+*.creator
+*.files
+*.includes
+*.creator.user
+*.default
+*.history
+*.prim
+*.eps
+*.creator.user.cb31b1a
 
 # Compiled Object files
 *.slo
@@ -21,7 +31,7 @@
 # CMake
 # only build dirs are ignored
 /build*/
-
+/temp/
 # QtCreator
 CMakeLists.txt.user
 
@@ -36,4 +46,4 @@ G4History.macro
 # some typical names for output folders
 # you can also use symlinks to your "real" folders
 /scratch
-/jobs
+
