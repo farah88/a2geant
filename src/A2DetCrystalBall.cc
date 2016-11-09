@@ -537,7 +537,7 @@ void A2DetCrystalBall::MakeOther2(){//Based on ugeom_mamic_apr09.F
   //  Rims right after the beam tunnel and inside the CB tunnel. Simulated by placing a 4 mm
   //  steel ring after the Ball. The ring is shadowing 19.93 degree cone. Updated now a 17.7degree cone.15/11/07
   //DG move inside exit tunnel and reduce outer angle to 21degrees
-  G4double zrim=100*cm;
+  G4double zrim=90*cm;//this is not the correct position!!!
   G4double rims_rin = tunl_rin/(tunl_z0+tunl_len)*zrim;
   G4double rims_rout = tan(30*deg)*zrim;
   G4double rims_z  = 2.5*inch/32;       // half length
@@ -546,7 +546,7 @@ void A2DetCrystalBall::MakeOther2(){//Based on ugeom_mamic_apr09.F
   G4double rims_zpos=zrim;
   fRIMS=new G4Tubs("RIMS",rims_rin,rims_rout,rims_z,rims_phlow,rims_phdelta);
   fRIMSLogic=new G4LogicalVolume(fRIMS,fNistManager->FindOrBuildMaterial("G4_Fe"),"RIMS");
-  fRIMSLogic->SetVisAttributes(CBVisAtt);
+  fRIMSLogic->SetVisAttributes(G4Colour(0.8,0.8,0.8));//CBVisAtt
   fRIMSPhysi[0]=new G4PVPlacement(0,G4ThreeVector(0,gap1,rims_zpos),fRIMSLogic,"RIMS",fMotherLogic,false,1);
   fRIMSPhysi[1]=new G4PVPlacement(fRot[96],G4ThreeVector(0,-gap2,rims_zpos),fRIMSLogic,"RIMS",fMotherLogic,false,2);
 
