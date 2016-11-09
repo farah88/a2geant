@@ -25,16 +25,18 @@
 /A2/generator/Seed 1189024341
 
 #Set the number of particles to be tracked from the input ntuple
-/A2/generator/NToBeTracked 3
+/A2/generator/NToBeTracked 5
 
 #give the indexes of the particles to be tracked (have a look at the branch names in the input file)
 /A2/generator/Track 1
 /A2/generator/Track 2
 /A2/generator/Track 3
+/A2/generator/Track 4
+/A2/generator/Track 5
 
 #Open the file and set up the ntuple for reading
-/A2/generator/InputFile /disk/user/afzal/Mainz/MC/particles_gen/gp_ppi0/gp_gppi0_300k_0.root
+/A2/generator/InputFile /disk/user/afzal/Mainz/MC/particles_gen/gp_ppi0pi0/gp_gppi0pi0_300k_0.root
 #####Output
 #Open the output file for writing
-/A2/event/setOutputFile /disk/user/afzal/Mainz/MC/particles_det_gen/gp_ppi0/gp_gppi0_300k_0.root
+/A2/event/setOutputFile /disk/user/afzal/Mainz/MC/particles_det_gen/gp_ppi0pi0/gp_gppi0pi0_300k_0.root
 

@@ -33,8 +33,8 @@
 /A2/generator/Track 3
 
 #Open the file and set up the ntuple for reading
-/A2/generator/InputFile /disk/user/afzal/Mainz/MC/particles_gen/gp_ppi0/gp_gppi0_300k_0.root
+/A2/generator/InputFile /disk/user/afzal/Mainz/MC/particles_gen/gp_peta/gp_gpeta_300k_0.root
 #####Output
 #Open the output file for writing
-/A2/event/setOutputFile /disk/user/afzal/Mainz/MC/particles_det_gen/gp_ppi0/gp_gppi0_300k_0.root
+/A2/event/setOutputFile /disk/user/afzal/Mainz/MC/particles_det_gen/gp_peta/gp_gpeta_300k_0.root
 
