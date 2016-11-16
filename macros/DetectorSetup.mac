@@ -7,19 +7,19 @@
 #####Use TAPS?
 #/A2/det/useTAPS 1
 ####Configure TAPS
-#/A2/det/setTAPSZ 175 cm
+#/A2/det/setTAPSZ 179.2 cm
 #/A2/det/setTAPSFile taps07.dat
 #/A2/det/setTAPSN 384
 #/A2/det/setTAPSPbWO4Rings 2
 ####Use the PID
-#/A2/det/usePID 2
+/A2/det/usePID 2
 #/A2/det/setPIDZ 0. cm
 
 #set to 1 to not create the anode wires, 2 to create the anode wires
 #/A2/det/useMWPC 2
 
 ####Use Cherenkov?
-/A2/det/useCherenkov 1
+#/A2/det/useCherenkov 1
 
 #/A2/det/useTOF 0
 #/A2/det/setTOFFile TOF.par
@@ -33,8 +33,8 @@
 #/A2/det/targetMaterial G4_Pb
 #/A2/det/targetMaterial G4_GRAPHITE
 #####Polarised target
-#/A2/det/useTarget Polarized
-#/A2/det/targetMaterial A2_HeButanol
-#/A2/det/targetMagneticCoils Solenoidal
+/A2/det/useTarget Polarized
+/A2/det/targetMaterial A2_HeButanol
+/A2/det/targetMagneticCoils Solenoidal
 #/A2/det/targetMagneticCoils Saddle
 #/A2/det/setTargetMagneticFieldMap wouter_field_map.dat
