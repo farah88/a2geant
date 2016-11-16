@@ -79,8 +79,8 @@
    
 /gun/particle pi-
 /gun/energy 3 MeV
-#/particle/select kaon+
-#/particle/process/inactivate 3
+/particle/select kaon+
+/particle/process/inactivate 3
 #for checking CCUT
 /gun/direction 0. 0. 1
 /gun/position 0 0 0
