@@ -7,16 +7,16 @@
 /run/verbose 1
 /run/initialize
 
-#/A2/physics/SetRegion CB
-#/A2/physics/RegionCut  0.1 mm
-#/A2/physics/SetRegion TAPS
-#/A2/physics/RegionCut  0.1 mm
-#/A2/physics/SetRegion TAPSV
-#/A2/physics/RegionCut 0.01 mm
-#/A2/physics/SetRegion PID
-#/A2/physics/RegionCut 0.01 mm
-#/A2/physics/SetRegion MWPC
-#/A2/physics/RegionCut 0.1 mm
+/A2/physics/SetRegion CB
+/A2/physics/RegionCut  0.1 mm
+/A2/physics/SetRegion TAPS
+/A2/physics/RegionCut  0.1 mm
+/A2/physics/SetRegion TAPSV
+/A2/physics/RegionCut 0.01 mm
+/A2/physics/SetRegion PID
+/A2/physics/RegionCut 0.01 mm
+/A2/physics/SetRegion MWPC
+/A2/physics/RegionCut 0.1 mm
 
 /A2/generator/SetThetaMin 0. deg
 /A2/generator/SetThetaMax 180.0 deg
@@ -36,5 +36,5 @@
 /A2/generator/InputFile /disk/user/afzal/Mainz/MC/particles_gen/gp_ppi0/gp_gppi0_300k_0.root
 #####Output
 #Open the output file for writing
-/A2/event/setOutputFile /disk/user/afzal/Mainz/MC/particles_det_gen/gp_ppi0/gp_gppi0_300k_0.root
+/A2/event/setOutputFile /disk/user/afzal/Mainz/MC/particles_det_gen/gp_ppi0_withCh/gp_gppi0_300k_0.root
 
